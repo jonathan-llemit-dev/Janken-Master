@@ -1,2 +1,3 @@
 # Janken-Master
-classic rock paper scissors game
+Classic Rock Paper Scissors Game.
+By: Jonathan Llemit Jr.
