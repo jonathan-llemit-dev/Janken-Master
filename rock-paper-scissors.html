@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="assets/logo/Logo_Janken_Master.png" type="image/x-icon">
-      <title>Janken Master</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo/Logo_Janken_Master.png" type="image/x-icon">
+    <title>Janken Master</title>
+
+    
+
   </head>
   <body>
-    <p>Janken Master</p>
+    <div class="title">Janken Master</div>
     
-    <button onclick="CalculateGameResult('rock')">Rock</button>
+    <div class="container">
 
-    <button onclick="CalculateGameResult('paper')">Paper</button>
+      <div class="button">
+        <img src="assets/gameplay_icons/rock.png" alt="">
+        <button onclick="CalculateGameResult('rock')">Rock</button>
+      </div>
 
-    <button onclick="CalculateGameResult('scissors')">Scissors</button>
+      <div class="button">
+        <img src="assets/gameplay_icons/paper.png" alt="">
+        <button onclick="CalculateGameResult('paper')">Paper</button>
+      </div>
+
+      <div class="button">
+        <img src="assets/gameplay_icons/scissor.png" alt="">
+        <button onclick="CalculateGameResult('scissors')">Scissors</button>
+      </div>
+
+    </div>
 
     <script>
 
