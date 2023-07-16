@@ -11,6 +11,12 @@
       /* CSS styles for the body */
       body {
         background-color: #a4d1e6;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
 
       /* CSS styles for the title */
@@ -97,7 +103,7 @@
       .modal-content {
         background-color: #fff;
         color: #333;
-        width: 24em;
+        width: auto;
         padding: 20px;
         border-radius: 10px;
         text-align: center;
@@ -106,14 +112,30 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 18px;
-        font-weight: bold;!      }
+        font-weight: bold;
+      }
 
       .close-btn {
         position: absolute;
         top: 10px;
         right: 10px;
         font-size: 20px;
+        color: #333;
         cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .close-btn:hover {
+        transform: rotate(90deg);
+      }
+
+      /* CSS styles for the footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: auto;
       }
 
     </style>
@@ -148,6 +170,10 @@
         <p id="result-text"></p>
       </div>
     </div>
+
+    <footer>
+      Developed By: Jonathan Llemit Jr. &copy; 2023 Janken Master. All rights reserved.
+    </footer>
 
     <script>
 
