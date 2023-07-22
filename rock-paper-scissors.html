@@ -169,6 +169,7 @@
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <p id="result-text"></p>
         <p id="scores-text"></p>
+        <button onclick="resetScores()">Reset Scores</button>
       </div>
     </div>
 
@@ -273,6 +274,13 @@
         document.getElementById('modal').style.display = 'none';
       }
       
+      function resetScores() {
+        scores.win = 0;
+        scores.lose = 0;
+        scores.tie = 0;
+        document.getElementById('scores-text').textContent = `Wins: ${scores.win} | Loses: ${scores.lose} | Ties: ${scores.tie}`;
+      }
+
     </script>
     
   </body>
