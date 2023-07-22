@@ -37,6 +37,9 @@
         justify-content: center;
         text-align: center;
         margin-top: 40px;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
       }
 
       /* CSS styles for the buttons */
@@ -58,6 +61,11 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         background-color: #ff6d6d;
         transition: transform 0.3s ease;
+      }
+
+      .score-icons {
+        width: 25px;
+        height: 25px;
       }
 
       /* CSS styles for the hover effect on images */
@@ -163,12 +171,19 @@
 
     </div>
 
+    <div class="container">
+      <p id="scores-text">Wins <img src="assets/gameplay_icons/trophy.png" class="score-icons"> : <span id="scores-text-wins">0</span> | 
+                          Loses <img src="assets/gameplay_icons/skull.png" class="score-icons"> : <span id="scores-text-loses">0</span> | 
+                          Ties <img src="assets/gameplay_icons/swords.png" class="score-icons"> : <span id="scores-text-ties">0</span>
+      </p>
+    </div>
+
     <!-- Modal -->
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <p id="result-text"></p>
-        <p id="scores-text"></p>
+        <p id="modal-scores-text"></p>
         <button onclick="resetScores()">Reset Scores</button>
       </div>
     </div>
@@ -254,7 +269,10 @@
 
         // Display the result in the modal
         document.getElementById('result-text').textContent = `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`;
-        document.getElementById('scores-text').textContent = `Wins: ${scores.win} | Loses: ${scores.lose} | Ties: ${scores.tie}`;
+        document.getElementById('modal-scores-text').textContent = `Wins: ${scores.win} | Loses: ${scores.lose} | Ties: ${scores.tie}`;
+        document.getElementById('scores-text-wins').textContent = `${scores.win}`;
+        document.getElementById('scores-text-loses').textContent = `${scores.lose}`;
+        document.getElementById('scores-text-ties').textContent = `${scores.tie}`;
 
         // Show the modal
         document.getElementById('modal').style.display = 'block';
@@ -278,7 +296,10 @@
         scores.win = 0;
         scores.lose = 0;
         scores.tie = 0;
-        document.getElementById('scores-text').textContent = `Wins: ${scores.win} | Loses: ${scores.lose} | Ties: ${scores.tie}`;
+        document.getElementById('scores-text-wins').textContent = `${scores.win}`;
+        document.getElementById('scores-text-loses').textContent = `${scores.lose}`;
+        document.getElementById('scores-text-ties').textContent = `${scores.tie}`;
+        document.getElementById('modal-scores-text').textContent = `Wins: ${scores.win} | Loses: ${scores.lose} | Ties: ${scores.tie}`;
       }
 
     </script>
