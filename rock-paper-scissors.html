@@ -42,13 +42,40 @@
         text-transform: uppercase;
       }
 
+      .container-reset-btn {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
       /* CSS styles for the buttons */
+
       .button {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 0 10px;
+      }
+
+      .reset-btn {
+        width: 150px;
+        padding: 10px;
+        margin-top: 2px;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background-color: #fa8888;
+        color: #333;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s ease;
       }
 
       /* CSS styles for the icons */
@@ -59,7 +86,7 @@
         border-radius: 20%;
         padding: 1em;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        background-color: #ff6d6d;
+        background-color: #fa8888;
         transition: transform 0.3s ease;
       }
 
@@ -178,8 +205,8 @@
       </p>
     </div>
 
-    <div class="container">
-      <button onclick="resetScores()">Reset Scores</button>
+    <div class="container-reset-btn">
+      <button class="reset-btn" onclick="resetScores()">Reset Scores</button>
     </div>
 
     <!-- Modal -->
@@ -188,7 +215,7 @@
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <p id="result-text"></p>
         <p id="modal-scores-text"></p>
-        <button onclick="resetScores()">Reset Scores</button>
+        <button class="reset-btn" onclick="resetScores()">Reset Scores</button>
       </div>
     </div>
 
