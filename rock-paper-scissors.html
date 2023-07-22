@@ -168,6 +168,7 @@
       <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
         <p id="result-text"></p>
+        <p id="scores-text"></p>
       </div>
     </div>
 
@@ -177,6 +178,14 @@
 
     <script>
 
+      // object for scores of player
+      let scores = {
+        win: 0,
+        lose: 0,
+        tie: 0
+      };
+
+      // generating a computer move
       function ComputerMove(){
 
         const randomNumber = Math.random();
@@ -195,6 +204,7 @@
 
       }
 
+      // calculating the game result between computer move and player move
       function CalculateGameResult(playerMove){
 
         let computerMove = ComputerMove();
@@ -233,8 +243,17 @@
 
         }
 
+        if(result == 'You win!'){
+          scores.win++;
+        }else if(result == 'You lose!'){
+          scores.lose++;
+        }else if(result == 'Tie!'){
+          scores.tie++;
+        }
+
         // Display the result in the modal
         document.getElementById('result-text').textContent = `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`;
+        document.getElementById('scores-text').textContent = `Wins: ${scores.win} | Loses: ${scores.lose} | Ties: ${scores.tie}`;
 
         // Show the modal
         document.getElementById('modal').style.display = 'block';
@@ -248,6 +267,7 @@
 
       }
 
+      // closing the modal
       function closeModal() {
         // Hide the modal
         document.getElementById('modal').style.display = 'none';
