@@ -162,3 +162,37 @@
     text-align: center;
     margin-top: auto;
     }
+
+    /* styles for history board */
+
+    /* Add styles for the history board container */
+    .history-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 100%;
+        padding: 10px;
+        background-color: #f1f1f1;
+        margin-left: auto; /* Move history board to the right */
+      }
+
+      .history-board {
+        margin-bottom: 20px;
+      }
+
+      .history-board h2 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      #history-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #history-list li {
+        margin-bottom: 5px;
+      }

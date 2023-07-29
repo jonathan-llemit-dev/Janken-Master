@@ -78,6 +78,13 @@
     document.getElementById('scores-text-loses').textContent = `${scores.lose}`;
     document.getElementById('scores-text-ties').textContent = `${scores.tie}`;
 
+    // Update history board
+    const historyList = document.getElementById("history-list");
+    const resultText = document.getElementById("result-text").textContent;
+    const historyItem = document.createElement("li");
+    historyItem.textContent = resultText;
+    historyList.prepend(historyItem);
+
     // Show the modal
     document.getElementById('modal').style.display = 'block';
 
