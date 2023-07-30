@@ -12,35 +12,52 @@
 
     <div class="title">Janken Master</div>
     
-    <div class="container">
+    <section class="main-screen">
 
-      <div class="button">
-        <img src="assets/gameplay_icons/rock.png" alt="" onclick="CalculateGameResult('rock')">
-        <button onclick="CalculateGameResult('rock')">Rock</button>
+      <div class="content">
+        <div class="container">
+
+          <div class="button">
+            <img src="assets/gameplay_icons/rock.png" alt="" onclick="CalculateGameResult('rock')">
+            <button onclick="CalculateGameResult('rock')">Rock</button>
+          </div>
+    
+          <div class="button">
+            <img src="assets/gameplay_icons/paper.png" alt="" onclick="CalculateGameResult('paper')">
+            <button onclick="CalculateGameResult('paper')">Paper</button>
+          </div>
+    
+          <div class="button">
+            <img src="assets/gameplay_icons/scissor.png" alt="" onclick="CalculateGameResult('scissors')">
+            <button onclick="CalculateGameResult('scissors')">Scissors</button>
+          </div>
+    
+        </div>
+    
+        <div class="container">
+          <p id="scores-text">Wins <img src="assets/gameplay_icons/trophy.png" class="score-icons"> : <span id="scores-text-wins">0</span> | 
+                              Loses <img src="assets/gameplay_icons/skull.png" class="score-icons"> : <span id="scores-text-loses">0</span> | 
+                              Ties <img src="assets/gameplay_icons/swords.png" class="score-icons"> : <span id="scores-text-ties">0</span>
+          </p>
+        </div>
+    
+        <div class="container-reset-btn">
+          <button class="reset-btn" onclick="resetScores()">Reset Scores</button>
+        </div>
       </div>
 
-      <div class="button">
-        <img src="assets/gameplay_icons/paper.png" alt="" onclick="CalculateGameResult('paper')">
-        <button onclick="CalculateGameResult('paper')">Paper</button>
+      <div class="content">
+        <div class="history-container">
+          <div class="history-board">
+            <h2>History Board</h2>
+            <ul id="history-list">
+              <!-- The history list will be populated dynamically using JavaScript -->
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="button">
-        <img src="assets/gameplay_icons/scissor.png" alt="" onclick="CalculateGameResult('scissors')">
-        <button onclick="CalculateGameResult('scissors')">Scissors</button>
-      </div>
-
-    </div>
-
-    <div class="container">
-      <p id="scores-text">Wins <img src="assets/gameplay_icons/trophy.png" class="score-icons"> : <span id="scores-text-wins">0</span> | 
-                          Loses <img src="assets/gameplay_icons/skull.png" class="score-icons"> : <span id="scores-text-loses">0</span> | 
-                          Ties <img src="assets/gameplay_icons/swords.png" class="score-icons"> : <span id="scores-text-ties">0</span>
-      </p>
-    </div>
-
-    <div class="container-reset-btn">
-      <button class="reset-btn" onclick="resetScores()">Reset Scores</button>
-    </div>
+    </section>
 
     <!-- Modal -->
     <div id="modal" class="modal">
@@ -49,15 +66,6 @@
         <p id="result-text"></p>
         <p id="modal-scores-text"></p>
         <button class="reset-btn" onclick="resetScores()">Reset Scores</button>
-      </div>
-    </div>
-
-    <div class="history-container">
-      <div class="history-board">
-        <h2>History Board</h2>
-        <ul id="history-list">
-          <!-- The history list will be populated dynamically using JavaScript -->
-        </ul>
       </div>
     </div>
 
