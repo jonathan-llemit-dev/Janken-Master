@@ -110,6 +110,7 @@
     }
     
     function resetScores() {
+        
         scores.win = 0;
         scores.lose = 0;
         scores.tie = 0;
@@ -117,4 +118,9 @@
         document.getElementById('scores-text-loses').textContent = `${scores.lose}`;
         document.getElementById('scores-text-ties').textContent = `${scores.tie}`;
         document.getElementById('modal-scores-text').textContent = `Wins: ${scores.win} | Loses: ${scores.lose} | Ties: ${scores.tie}`;
+
+        // Clear history board
+        const historyList = document.getElementById("history-list");
+        historyList.innerHTML = ''; // Clear all history 
+        
     }
