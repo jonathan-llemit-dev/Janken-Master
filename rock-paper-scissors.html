@@ -1,62 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/logo/Logo_Janken_Master.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="assets/logo/Logo_Janken_Master.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Janken Master</title>
-
   </head>
   <body>
-
     <div class="title">Janken Master</div>
-    
-    <section class="main-screen">
 
+    <section class="main-screen">
       <div class="content">
         <div class="container">
-
           <div class="button">
-            <img src="assets/gameplay_icons/rock.png" alt="" onclick="CalculateGameResult('rock')">
+            <img
+              src="assets/gameplay_icons/rock.png"
+              alt=""
+              onclick="CalculateGameResult('rock')"
+            />
             <button onclick="CalculateGameResult('rock')">Rock</button>
           </div>
-    
+
           <div class="button">
-            <img src="assets/gameplay_icons/paper.png" alt="" onclick="CalculateGameResult('paper')">
+            <img
+              src="assets/gameplay_icons/paper.png"
+              alt=""
+              onclick="CalculateGameResult('paper')"
+            />
             <button onclick="CalculateGameResult('paper')">Paper</button>
           </div>
-    
+
           <div class="button">
-            <img src="assets/gameplay_icons/scissor.png" alt="" onclick="CalculateGameResult('scissors')">
+            <img
+              src="assets/gameplay_icons/scissor.png"
+              alt=""
+              onclick="CalculateGameResult('scissors')"
+            />
             <button onclick="CalculateGameResult('scissors')">Scissors</button>
           </div>
-    
         </div>
-    
+
         <div class="container">
-          <p id="scores-text">Wins <img src="assets/gameplay_icons/trophy.png" class="score-icons"> : <span id="scores-text-wins">0</span> | 
-                              Loses <img src="assets/gameplay_icons/skull.png" class="score-icons"> : <span id="scores-text-loses">0</span> | 
-                              Ties <img src="assets/gameplay_icons/swords.png" class="score-icons"> : <span id="scores-text-ties">0</span>
+          <p id="scores-text">
+            Wins
+            <img src="assets/gameplay_icons/trophy.png" class="score-icons" /> :
+            <span id="scores-text-wins">0</span> | Loses
+            <img src="assets/gameplay_icons/skull.png" class="score-icons" /> :
+            <span id="scores-text-loses">0</span> | Ties
+            <img src="assets/gameplay_icons/swords.png" class="score-icons" /> :
+            <span id="scores-text-ties">0</span>
           </p>
         </div>
-    
+
         <div class="container-reset-btn">
-          <button class="reset-btn" onclick="resetScores()">Reset Scores</button>
+          <button class="reset-btn" onclick="resetScores()">
+            Reset Scores
+          </button>
         </div>
       </div>
 
       <div class="content">
         <div class="history-container">
           <div class="history-board">
-            <h2>History Board</h2>
+            <h2 class="history-board-title">History Board</h2>
             <ul id="history-list">
               <!-- The history list will be populated dynamically using JavaScript -->
             </ul>
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- Modal -->
@@ -70,10 +87,10 @@
     </div>
 
     <footer>
-      Developed By: Jonathan Llemit Jr. &copy; 2023 Janken Master. All rights reserved.
+      Developed By: Jonathan Llemit Jr. &copy; 2023 Janken Master. All rights
+      reserved.
     </footer>
 
     <script src="script.js"></script>
-    
   </body>
 </html>
