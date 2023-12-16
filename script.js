@@ -64,16 +64,20 @@
         }
 
         let bgColorClass = "";
+        let resultLogo = document.getElementById("result-logo");
 
         if(result == 'You win!'){
             scores.win++;
             bgColorClass = "win-bg";
+            resultLogo.src = "assets/gameplay_icons/trophy.png";
         }else if(result == 'You lose!'){
             scores.lose++;
             bgColorClass = "lose-bg";
+            resultLogo.src = "assets/gameplay_icons/skull.png";
         }else if(result == 'Tie!'){
             scores.tie++;
             bgColorClass = "tie-bg";
+            resultLogo.src = "assets/gameplay_icons/swords.png";
         }
 
         // Display the result in the modal
