@@ -245,3 +245,15 @@ footer {
   background-color: #96c9e0; /* Blue background for ties */
   color: black; /* Black text for better readability */
 }
+
+.win-txt {
+  color: #7ef57e; /* Black text for better readability */
+}
+
+.lose-txt {
+  color: #f77b7b; /* Black text for better readability */
+}
+
+.tie-txt {
+  color: #96c9e0; /* Black text for better readability */
+}
